@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>test Ws mqtt.js</title>
+</head>
+<body>
+<script src="./browserMqtt.js"></script>
+<script>
+ // var client = mqtt.connect('mqtt://192.168.1.191:8000'); // you add a ws:// url here
+  var client = mqtt.connect({ host: '192.168.1.191', port: 3333,clientId:"21" });
+  client.subscribe("presence");
+
+  client.on("message", function (topic, payload) {
+    alert([topic, payload].join(": "));
+  })
+
+  // client.publish("mqtt/demo", "hello world!");
+</script>
+</body>
+</html>

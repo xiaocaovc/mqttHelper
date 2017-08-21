@@ -1,0 +1,23 @@
+{
+  "name": "mqtt-helper",
+  "version": "0.1.0",
+  "description": "mqtt broker helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaocaovc/mqttHelper.git"
+  },
+  "author": "centercao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaocaovc/mqttHelper/issues"
+  },
+  "homepage": "https://github.com/xiaocaovc/mqttHelper#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "mosca": "^2.5.2"
+  }
+}
