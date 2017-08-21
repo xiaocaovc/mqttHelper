@@ -8,7 +8,6 @@ var options = {
 
 
 var client = mqtt.connect('mqtts://' + options.host,options);
-
 client.on('connect', function () {
 	client.subscribe('presence');
 	client.publish('presence', 'Hello mqtts');
@@ -16,6 +15,6 @@ client.on('connect', function () {
 
 client.on('message', function (topic, message) {
 	// message is Buffer
-	console.log(message.toString());
-	client.end();
+	console.log("message:" +message.toString());
+	// client.end();
 });
