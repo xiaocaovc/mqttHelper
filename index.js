@@ -1,9 +1,7 @@
 var Mosca = require('mosca');
-var SECURE_KEY = __dirname + '/ssl/privatekey.pem';
-var SECURE_CERT = __dirname + '/ssl/certificate.pem';
 const _ = require('lodash');
 
-const defaulfOptions = {
+const defaultOptions = {
 	port: 0,
 	ports: 0,
 	httpPort: 0,
@@ -12,7 +10,7 @@ const defaulfOptions = {
 	SECURE_CERT:""
 };
 var MQTT =   function(options){
-	options = _.assign({}, defaulfOptions, options);
+	options = _.merge({}, defaultOptions, options);
 	options = {
 		port: options.port,
 		stats: false,
